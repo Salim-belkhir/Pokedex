@@ -21,14 +21,6 @@
 
         <button id="home" v-on:click="acceuil()">Acceuil</button>
 
-        <!-- <form>
-            
-            <label for="research">Rechercher</label>
-            <input class="saisie" type="text" placeholder="Pokemon" v-model="nomResearch">
-            <input type="submit" v-on:clik="research()"  id="subm" value="Research">
-              
-        </form>      -->
-
         <hr>
         <section >
             <div :class="{ aggrandi : element.showDetails }" v-for="(element,index) in pokemons" :key="index" v-show="element.show" v-on:click="afficherinfos(index)">
