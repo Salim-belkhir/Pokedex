@@ -1,0 +1,176 @@
+body{
+    background-color: lightgrey;
+}
+
+nav{
+    background-color: red;
+    height : 150px;
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 50px;
+}
+
+#logo1{
+    width: 20%;
+    height: auto;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    padding-left: 40%;
+
+}
+
+input{
+    margin-left: 4px;
+}
+
+input:hover, input:focus{
+    border : red 3px solid;
+    border-radius: 3px;
+}
+
+label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    size: 15px;
+}
+
+
+section{
+    width : auto;
+	display: grid;
+	column-gap: 1px;
+	grid-template-columns:  auto auto auto auto auto auto auto; 
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    border: 3px solid grey;
+    border-radius: 10%;
+    text-align: center;
+    background-color: rgb(151, 151, 206);
+    
+}
+
+.images{
+    align-content: center;
+    top:20%;
+    width: 50%;
+}
+
+div:hover{
+    opacity: 0.7;
+}
+
+section{
+    align-content: center;
+    width: 70%;
+    align-items: center;
+}
+
+#research{
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+#research:hover{
+    background-color: red;
+}
+
+#logo2{
+    width: 110%;
+    height: auto;
+    float: inline-start;
+}
+
+#charger{
+    size: 6px;
+    color: whitesmoke;
+    font-size: large;
+    align-self: center;
+    margin-top: 10%;
+    margin-left: 45%;
+    margin-bottom: 20%;
+    border-radius: 20%;
+    border-color: darkred;
+    padding: 10px;
+    background-color: red;
+}
+
+#charger:hover{
+    opacity: 0.5;
+}
+
+.identifiant{
+    color: blue;
+    text-align: left;
+    text-shadow: 1px;
+    top : 10%;
+    margin: 0;
+    margin-left: 6px;  
+}
+
+.name{
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    color: rgb(253, 253, 0);
+}
+
+.aggrandi{
+    height: 300px;
+}
+
+.aggrandi>img{
+    width: 70%;
+}
+
+#liste{
+    text-align: left;
+}
+
+#home{
+    color: white;
+    float: right;
+    margin-right: 10%;
+    background-color: brown;
+    border-radius: 30%;
+    padding:5px;
+    width: 10%;
+    height: 5%;
+}
+
+#home:hover{
+    opacity: 0.5;
+}
+
+
+@media (max-width : 750px) {
+    #grille{
+        width : auto;
+        display: grid;
+        column-gap: 3px;
+        grid-template-columns:  auto auto auto; 
+    }
+}
+
+@media (max-width : 550px) {
+    #grille{
+        width : auto;
+        display: grid;
+        column-gap: 3px;
+        grid-template-columns:  auto auto ; 
+    }    
+}
+
+
+@media (max-width : 950px) {
+    #grille{
+        width : auto;
+        display: grid;
+        column-gap: 3px;
+        grid-template-columns:  auto auto auto auto; 
+    }
+}

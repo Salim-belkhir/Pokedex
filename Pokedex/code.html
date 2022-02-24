@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pokedex</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico">
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src="main.js"></script>
+    </head>
+    <body id="grille">
+        <nav>
+            <img id="logo1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/640px-International_Pok%C3%A9mon_logo.svg.png" alt="">
+        </nav>
+        
+        
+        <label for="research"> <b>Recherche</b></label>
+        <input id="in1" type="text" placeholder="Pokemon" v-model="nomResearch">
+        <button id="research" v-on:click="research()"><img id="logo2" src="http://assets.stickpng.com/images/585e4adacb11b227491c3392.png" alt=""></button>
+
+
+        <button id="home" v-on:click="acceuil()">Acceuil</button>
+
+        <!-- <form>
+            
+            <label for="research">Rechercher</label>
+            <input class="saisie" type="text" placeholder="Pokemon" v-model="nomResearch">
+            <input type="submit" v-on:clik="research()"  id="subm" value="Research">
+              
+        </form>      -->
+
+        <hr>
+        <section >
+            <div :class="{ aggrandi : element.showDetails }" v-for="(element,index) in pokemons" :key="index" v-show="element.show" v-on:click="afficherinfos(index)">
+                <p class="identifiant"> #id : {{ element.id }} </p> <br> 
+                <img class="images" :src="element.img" alt="">
+                <b><p  class="name">{{ element.name }}</p></b>
+                
+                <p v-if="element.showDetails">Les abilités sont :</p>
+                <ul v-if="element.showDetails"> 
+                    <li v-for="abi in element.abilities"> {{abi.ability.name}}</li>
+                </ul>
+            </div>
+             
+        </section>
+
+        <button v-on:click="charger()" id="charger">Charger plus</button> 
+
+        <script>
+            const App = app.mount('#grille')
+        </script>
+    </body>
+</html>
