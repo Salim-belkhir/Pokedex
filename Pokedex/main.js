@@ -4,7 +4,7 @@ const app = Vue.createApp({
              pokemons : [],
              number : 40,
              recherche : "",
-             nomResearch : ""
+             nomResearch : null
             
         }
     },
@@ -37,11 +37,10 @@ const app = Vue.createApp({
         },
         research(){
             let nom = this.nomResearch
-            console.log(nom)
             let nonTrouve = true
             let indice = 0
             while(indice < this.pokemons.length & nonTrouve){
-                if(this.pokemons[indice].name == nom){
+                if(this.pokemons[indice].name == nom | this.pokemons[indice].id == nom){
                     nonTrouve = false 
                 }
                 else{
